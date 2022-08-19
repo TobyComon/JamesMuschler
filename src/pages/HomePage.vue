@@ -1,44 +1,39 @@
 <template>
-  <div
-    class="
-      home
-      flex-grow-1
-      d-flex
-      flex-column
-      align-items-center
-      justify-content-center
-    "
-  >
-    <div class="home-card p-5 bg-white rounded elevation-3 mb-5">
-      <img
-        src="https://bcw.blob.core.windows.net/public/img/8600856373152463"
-        alt="CodeWorks Logo"
-        class="rounded-circle"
-      />
-      <h1 class="my-5 bg-dark text-white p-3 rounded text-center">
-        Vue 3 Starter
-      </h1>
-    </div>
+  <div class="">
+    <img
+      class="img-fluid"
+      src="src/assets/img/MFY1J0.jpg"
+      alt="Image of James at the drumset"
+    />
   </div>
-  <div class="container my-5">
+
+  <div id="bio" class="bio container-fluid">
     <div class="row">
-      <div class="col">
-        <img src="https://thiscatdoesnotexist.com" alt="" />
-      </div>
-    </div>
-  </div>
-  <div id="bio" class="mt-5 bio container-fluid d-flex flex-grow-1">
-    <div class="row">
-      <div class="col">
-        BIO Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore,
-        recusandae! Nulla id cumque ut quibusdam recusandae architecto neque
-        odio quisquam? Suscipit veniam voluptate alias esse vitae non modi amet
-        qui? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-        temporibus sunt earum, ullam tenetur nemo atque eligendi perferendis,
-        rem porro animi adipisci dolore quo hic laudantium sint cum magni sequi.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed dicta
-        ullam impedit neque in cum explicabo, cumque sunt expedita laudantium
-        tempore, amet ea unde, rem blanditiis dolor? Incidunt, animi quis?
+      <div class="col-md-6">
+        <h1 class="text-primary">BIO</h1>
+        <article class="bg-dark text-light p-2 my-2 rounded shadow">
+          I believe in the power of music to bring people together. I am an
+          American multi-instrumentalist/composer/producer from Cleveland, OH.
+          My instruments include the drums, tabla, piano, saxophone, guitar,
+          bass, bansuri flute, and various frame drums. In 2011, I graduated
+          from The New School for Jazz and Contemporary Music in NYC with a BFA
+          in Jazz Performance (drums). In 2010, I co-founded the band Moon Hooch
+          with saxophonists Wenzl McGowen and Michael Wilbur. We toured for 10
+          years, playing at major festivals and venues in the US and in Europe,
+          as well as Serbia, Russia, and Australia. I'm currently based in the
+          New England area (Burlington, VT). In February 2021, I released my
+          debut album, "The Evolution of Life Forms on Earth", a 40-minute
+          musical simulation of our 4-billion year biological ancestry (written
+          for acoustic percussion). I am teaching music remotely until the
+          pandemic situation improves. Connect with me at
+          jamesmuschler@gmail.com. I love teaching, and I love receiving
+          feedback (: <br />
+          I am also passionate about environmentalism and of the preservation of
+          animal habitat and of biodiversity. One of the most direct ways we can
+          all contribute positively to the future of the planet is to acquire a
+          vegan diet. I run a vegan cooking blog on instagram
+          <a href="">@cookinginthecave </a>
+        </article>
       </div>
     </div>
   </div>
