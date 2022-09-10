@@ -3,7 +3,7 @@
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
       <div class="d-flex flex-column align-items-center">
         <!-- <img alt="logo" src="../assets/img/cw-logo.png" height="45" /> -->
-        <h2>JAMES MUSCHLER</h2>
+        <h2 class="p-1">JAMES MUSCHLER</h2>
       </div>
     </router-link>
     <button
@@ -34,7 +34,11 @@
           </div>
         </li>
       </ul>
+
       <Socials />
+      <i class="text-dark fs-5" href="mailto:jamesmuschler@gmail.com"
+        >jamesmuschler@gmail.com</i
+      >
       <!-- LOGIN COMPONENT HERE -->
       <!-- <Login /> -->
     </div>
