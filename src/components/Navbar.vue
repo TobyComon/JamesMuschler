@@ -20,7 +20,11 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto">
         <li>
-          <div class="btn text-success lighten-30 selectable text-uppercase">
+          <div
+            class="btn text-success lighten-30 selectable text-uppercase"
+            @click="$emit('scroll', 'bio')"
+            aria-describedby="Bio navigation button"
+          >
             BIO
           </div>
         </li>

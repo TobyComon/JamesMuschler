@@ -1,4 +1,7 @@
 <template>
+  <header>
+    <Navbar @scroll="scrollToElement" />
+  </header>
   <div class="">
     <img
       class="img-fluid"
@@ -7,53 +10,69 @@
     />
   </div>
 
-  <div id="bio" class="bio container-fluid">
+  <div id="bio" class="bio container-fluid" ref="bio">
     <div class="row">
       <div class="col-md-6">
-        <h1 class="text-primary">BIO</h1>
-        <article class="bg-dark text-light p-2 my-2 rounded shadow">
-          I believe in the power of music to bring people together. I am an
-          American multi-instrumentalist/composer/producer from Cleveland, OH.
-          My instruments include the drums, tabla, piano, saxophone, guitar,
-          bass, bansuri flute, and various frame drums. In 2011, I graduated
-          from The New School for Jazz and Contemporary Music in NYC with a BFA
-          in Jazz Performance (drums). In 2010, I co-founded the band Moon Hooch
-          with saxophonists Wenzl McGowen and Michael Wilbur. We toured for 10
-          years, playing at major festivals and venues in the US and in Europe,
-          as well as Serbia, Russia, and Australia. I'm currently based in the
-          New England area (Burlington, VT). In February 2021, I released my
-          debut album, "The Evolution of Life Forms on Earth", a 40-minute
-          musical simulation of our 4-billion year biological ancestry (written
-          for acoustic percussion). I am teaching music remotely until the
-          pandemic situation improves. Connect with me at
-          jamesmuschler@gmail.com. I love teaching, and I love receiving
-          feedback (: <br />
-          I am also passionate about environmentalism and of the preservation of
-          animal habitat and of biodiversity. One of the most direct ways we can
-          all contribute positively to the future of the planet is to acquire a
-          vegan diet. I run a vegan cooking blog on instagram
-          <a href="">@cookinginthecave </a>
-        </article>
+        <h1 class="text-primary text-center">BIO</h1>
+        <h3 class="">James Muschler</h3>
+        <p class="p-2 my-2 elevation-4 rounded">
+          is an American multi-instrumentalist, composer, and producer from
+          Cleveland, Ohio. He specializes in drums, tabla, piano, saxophone,
+          guitar, bass, bansuri flute, and various frame drums. <br />
+          He earned a BFA in Jazz Performance (drums) from The New School for
+          Jazz and Contemporary Music in NYC. James co-founded Moon Hooch with
+          Wenzl McGowen and Michael Wilbur in 2010. For ten years, they toured
+          the US, Europe, Serbia, Russia, Australia, and Canada, playing major
+          festivals and venues. <br />
+          James teaches drums, tabla, piano, and saxophone in Park Slope,
+          Brooklyn, remotely, or in-home within the NYC area. He has experience
+          with adults and youth ages 5+. <br />
+          <strong> Reach James at: </strong>
+          <a href="mailto:jamesmuschler@gmail.com">jamesmuschler@gmail.com</a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img
+          class="img-fluid"
+          src="src/assets/img/Jane and James - Masters-195.jpg"
+          alt=""
+        />
       </div>
     </div>
   </div>
+  <Carousel2 />
 </template>
 
 <script>
 import { ref } from "vue";
+import Navbar from "../components/Navbar.vue";
+import Carousel from "../components/Carousel.vue";
+import Carousel2 from "../components/Carousel2.vue";
 
 export default {
   name: "Home",
-
+  methods: {
+    scrollToElement(target) {
+      let el = this.$refs[target];
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    },
+  },
   setup() {
     return {
       bio: ref.bio,
     };
   },
+  components: { Navbar, Carousel, Carousel2 },
 };
 </script>
 
 <style scoped lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+#bio {
+  font-family: "Raleway", sans-serif;
+}
 .home {
   display: grid;
   height: 80vh;
